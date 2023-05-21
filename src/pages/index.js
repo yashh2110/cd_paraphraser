@@ -4,9 +4,15 @@ import styles from "@/styles/Home.module.css";
 import Header from "@/components/header/Header";
 import logo from "../assets/svg/Logo.svg";
 import { menu } from "@/data/menu";
-import { Box, Text } from "@chakra-ui/react";
-import Playground from "@/components/paraphraser/playground/Playground";
-
+import { Box, Skeleton, Text } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+const Playground = dynamic(
+  () => import("@/components/paraphraser/playground/Playground"),
+  {
+    ssr: false,
+    loading: () => <Skeleton></Skeleton>,
+  }
+);
 export default function Home() {
   return (
     <>

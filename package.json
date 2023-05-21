@@ -15,12 +15,14 @@
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@next/font": "^13.4.2",
+    "axios": "^1.4.0",
     "draft-js": "^0.11.7",
     "draft-js-export-html": "^1.4.1",
     "framer-motion": "^10.12.12",
     "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^4.8.0"
   }
 }

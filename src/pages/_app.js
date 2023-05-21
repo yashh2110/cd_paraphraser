@@ -3,6 +3,7 @@ import { theme } from "@/themes/theme";
 import { ChakraProvider } from "@chakra-ui/react";
 import { CacheProvider } from "@chakra-ui/next-js";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -16,11 +17,10 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-      <CacheProvider>
-        <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
-        </ChakraProvider>
-      </CacheProvider>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+        <Toaster />
+      </ChakraProvider>
     </>
   );
 }

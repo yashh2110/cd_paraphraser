@@ -20,7 +20,7 @@ import {
   AiOutlineCopy,
   AiOutlineDelete,
 } from "react-icons/ai";
-function Toolbar() {
+function Toolbar({ handleDelete, handleCopy }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const modeRef = useRef(null);
   return (
@@ -67,10 +67,12 @@ function Toolbar() {
         />
         <IconButton
           variant={"ghost"}
+          onClick={handleCopy}
           icon={<Icon as={AiOutlineCopy} boxSize={5} />}
         />
         <IconButton
           variant={"ghost"}
+          onClick={handleDelete}
           icon={<Icon as={AiOutlineDelete} boxSize={5} />}
         />
       </Box>
