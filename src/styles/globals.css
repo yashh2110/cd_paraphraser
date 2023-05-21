@@ -8,6 +8,7 @@
   --disabled-color: #2b2624;
   --border-color: #f0edec;
   --text-color: #1a1a1a;
+  --secondary-text-color: #707070;
   --link-color: #146ae2;
   --primary-background-color: #fffffe;
   --secondary-background-color: #fbfbfb;
@@ -53,4 +54,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+div.DraftEditor-root {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+div.DraftEditor-editorContainer,
+div.public-DraftEditor-content {
+  height: 100%;
 }

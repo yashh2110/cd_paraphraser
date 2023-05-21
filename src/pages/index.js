@@ -3,6 +3,10 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/header/Header";
 import logo from "../assets/svg/Logo.svg";
+import { menu } from "@/data/menu";
+import { Box, Text } from "@chakra-ui/react";
+import Playground from "@/components/paraphraser/playground/Playground";
+
 export default function Home() {
   return (
     <>
@@ -13,7 +17,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header logo={logo} />
+        <Header logo={logo} menu={menu} />
+        <Box px={["20px", 50, 50, 130]} mt={["15px", "25px"]}>
+          <Text fontSize={["25px", "30px"]} fontWeight="700">
+            Paraphraser
+          </Text>
+          <Playground />
+        </Box>
       </main>
     </>
   );
