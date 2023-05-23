@@ -41,7 +41,9 @@ function Playground() {
     try {
       const res = await paraphraseService({ content });
       console.log(res.data);
-      setRephrasedContent(res?.data?.paraPhrase);
+      setRephrasedContent(
+        res?.data?.paraPhrase?.map((item) => item[1])?.join(" ")
+      );
       setRephraseLoading(false);
     } catch (error) {
       console.log(error);

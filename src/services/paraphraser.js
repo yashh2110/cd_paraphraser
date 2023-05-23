@@ -1,5 +1,5 @@
 import axios from "axios";
-const uri = `http://54.80.29.81/api/v1`;
+const uri = `https://paraphrase-api.goom.ai/api/v1`;
 
 export const paraphraseService = async ({ content }) => {
   const res = await axios.post(
