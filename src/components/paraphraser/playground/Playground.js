@@ -41,9 +41,7 @@ function Playground() {
     try {
       const res = await paraphraseService({ content });
       console.log(res.data);
-      setRephrasedContent(
-        res?.data?.paraPhrase?.map((item) => item[1])?.join(" ")
-      );
+      setRephrasedContent(res?.data?.paraPhrase);
       setRephraseLoading(false);
     } catch (error) {
       console.log(error);
@@ -64,8 +62,10 @@ function Playground() {
   //   handling copy
   const handleCopy = () => {
     if (content.length > 1) {
-      navigator.clipboard.writeText(content);
-      toast.success("Copied to clipboard", { duration: 1500 });
+      navigator.clipboard.writeText(rephrasedContent);
+      toast.success("Copied rephrased content to clipboard", {
+        duration: 1500,
+      });
     } else {
       toast.error("No content to copy", { duration: 1300 });
     }
@@ -82,7 +82,7 @@ function Playground() {
             flexWrap={"wrap"}
             position={"relative"}
             h={"100%"}
-            // backgroundColor={"var(--secondary-background-color)"}
+            backgroundColor={"var(--secondary-background-color)"}
           >
             <Box
               minH={["25vh", "55vh"]}
@@ -131,9 +131,13 @@ function Playground() {
               w={["100%", "100%", "50%"]}
               left={0}
               px={4}
-              backgroundColor={"var(--primary-background-color)"}
+              backgroundColor={[
+                "var(--secondary-background-color",
+                "var(--secondary-background-color",
+                "var(--primary-background-color)",
+              ]}
             >
-              <Text fontSize={"15px"} color={"#585858"} fontWeight={500}>
+              <Text fontSize={"15px"} color={"#585858"} fontWeight={500} pl={4}>
                 Word count: {wordCount}
               </Text>
             </Box>

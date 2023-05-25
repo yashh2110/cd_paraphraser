@@ -4,8 +4,18 @@ import styles from "@/styles/Home.module.css";
 import Header from "@/components/header/Header";
 import logo from "../assets/svg/Logo.svg";
 import { menu } from "@/data/menu";
-import { Box, Skeleton, Text } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  Skeleton,
+  Text,
+} from "@chakra-ui/react";
 import dynamic from "next/dynamic";
+import Testimonials from "@/components/testimonial/Testimonials";
 const Playground = dynamic(
   () => import("@/components/paraphraser/playground/Playground"),
   {
@@ -30,6 +40,42 @@ export default function Home() {
           </Text>
           <Playground />
         </Box>
+        <Testimonials />
+        <Accordion allowToggle>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box as="span" flex="1" textAlign="left">
+                  Section 1 title
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box as="span" flex="1" textAlign="left">
+                  Section 2 title
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
       </main>
     </>
   );
