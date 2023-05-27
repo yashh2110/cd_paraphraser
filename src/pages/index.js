@@ -16,6 +16,9 @@ import {
 } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import Testimonials from "@/components/testimonial/Testimonials";
+import Faq from "@/components/faq/Faq";
+import SeoTable from "@/components/seo/SeoTable";
+import ContentBlock from "@/components/content-block/ContentBlock";
 const Playground = dynamic(
   () => import("@/components/paraphraser/playground/Playground"),
   {
@@ -34,48 +37,29 @@ export default function Home() {
       </Head>
       <main>
         <Header logo={logo} menu={menu} />
-        <Box px={["20px", 50, 50, 130]} mt={["15px", "25px"]}>
-          <Text fontSize={["25px", "30px"]} fontWeight="700">
-            Paraphraser
-          </Text>
-          <Playground />
+        <Box
+          mt={["15px", "25px"]}
+          display={"flex"}
+          alignItems={"center"}
+          flexDirection={"column"}
+        >
+          <Box w={["90%", "90%", "85%"]}>
+            <Text fontSize={["25px", "30px"]} fontWeight="700">
+              Paraphraser
+            </Text>
+            <Playground />
+          </Box>
+          <ContentBlock
+            theme="secondary"
+            title={"How AI Content Detection Works?"}
+            content={
+              "It is difficult to detect any kind of content, but it is almost impossible to get an accuracy rate close to 100% when detecting AI content. This detection model was developed by combining and fine-tuning the results of Open AI's GPT 2 model with the outputs of a robustly optimized BERT pretraining approach (Roberta) model. To determine whether the content was created by AI, users need to utilize this tool along with their judgment."
+            }
+          />
+          <SeoTable />
+          <Testimonials />
+          <Faq />
         </Box>
-        <Testimonials />
-        <Accordion allowToggle>
-          <AccordionItem>
-            <h2>
-              <AccordionButton>
-                <Box as="span" flex="1" textAlign="left">
-                  Section 1 title
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
-          </AccordionItem>
-
-          <AccordionItem>
-            <h2>
-              <AccordionButton>
-                <Box as="span" flex="1" textAlign="left">
-                  Section 2 title
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
-          </AccordionItem>
-        </Accordion>
       </main>
     </>
   );

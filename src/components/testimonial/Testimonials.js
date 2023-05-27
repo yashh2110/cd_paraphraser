@@ -5,7 +5,7 @@ import circle from "../../assets/svg/circle-creative.svg";
 import square from "../../assets/svg/square-creative.svg";
 import { Box, Card, Text } from "@chakra-ui/react";
 import { testimonials } from "@/data/common";
-import Rating from "@mui/material/Rating";
+import StarIcon from "@mui/icons-material/Star";
 function Testimonials({ styles }) {
   const testimonial_settings = {
     dots: false,
@@ -42,59 +42,56 @@ function Testimonials({ styles }) {
       backgroundColor="var(--secondary-background-color)"
       display="flex"
       justifyContent="center"
-      alignItems="flex-start"
-      flexDirection={"row"}
+      alignItems="center"
+      //   flexDirection={"row"}
+      w={"100vw"}
       flexWrap={"wrap"}
       py={10}
     >
-      <Box position={"relative"}>
+      <Box position={"relative"} w={["90%", "90%", "85%"]}>
         <Text
-          fontSize={"28px"}
+          fontSize={["22px", "28px"]}
           fontWeight={800}
-          mx={["20px", 50, 50, 130]}
-          pb={5}
+          textAlign={["center", "center", "left"]}
         >
           Testimonials
         </Text>
-        <Box position={"relative"} w="100vw" m={0}>
+        <Box position={"relative"} w="100%" mt="20px">
           <Box
             position={"absolute"}
-            left={"-25px"}
-            top={"-25px"}
+            left={"0"}
+            top={"0"}
             zIndex={0}
             w={"100px"}
             h={"100px"}
-            mx={["20px", 50, 50, 130]}
           >
             <Image src={square} alt="cd" />
           </Box>
           <Box
             position={"absolute"}
-            right={"-25px"}
-            bottom={"-25px"}
+            right={"0"}
+            bottom={"0"}
             zIndex={0}
             w={"100px"}
             h={"100px"}
-            mx={["20px", 50, 50, 130]}
           >
             <Image src={circle} alt="cd" />
           </Box>
           <Box
             position={"relative"}
-            w="100%"
+            // w="100%"
             display={"flex"}
             flexDirection={"row"}
             alignItems={"flex-start"}
             justifyContent={"center"}
             flexWrap={"wrap"}
-            my={"25px"}
+            // my={"25px"}
           >
-            {/* <Slider {...testimonial_settings}> */}
             {testimonials.map((item) => (
               <Box
                 boxShadow="sm"
                 position={"relative"}
-                w={["90%", "90%", "30%"]}
+                w={["99%", "99%", "30%"]}
                 bg={"var(--white)"}
                 borderRadius={10}
                 m="10px"
@@ -103,11 +100,13 @@ function Testimonials({ styles }) {
                 h={"auto"}
                 key={item.id}
               >
-                {/* <Box> */}
-                {/* <div>
-                  <Rating name="read-only" value={item.rating} readOnly />
-                </div> */}
-                {/* </Box> */}
+                <Box display={"flex"} my="10px">
+                  <StarIcon style={{ color: "#FDCC0D" }} />
+                  <StarIcon style={{ color: "#FDCC0D" }} />
+                  <StarIcon style={{ color: "#FDCC0D" }} />
+                  <StarIcon style={{ color: "#FDCC0D" }} />
+                  <StarIcon style={{ color: "#dddddd" }} />
+                </Box>
                 <Text my="15px">{item.desc}</Text>
                 <Box
                   pt="10px"
@@ -129,8 +128,6 @@ function Testimonials({ styles }) {
                 </Box>
               </Box>
             ))}
-
-            {/* </Slider> */}
           </Box>
         </Box>
       </Box>

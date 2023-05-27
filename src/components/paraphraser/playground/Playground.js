@@ -85,7 +85,7 @@ function Playground() {
             backgroundColor={"var(--secondary-background-color)"}
           >
             <Box
-              minH={["25vh", "55vh"]}
+              minH={["35vh", "55vh"]}
               h="100%"
               py={3}
               pb={["5vh"]}
@@ -107,7 +107,7 @@ function Playground() {
               />
             </Box>
             <Box
-              minH={["25vh", "55vh"]}
+              minH={["35vh", "55vh"]}
               py={3}
               pb={["5vh"]}
               px={4}
