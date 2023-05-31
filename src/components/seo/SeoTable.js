@@ -26,49 +26,49 @@ function SeoTable() {
       flexWrap={"wrap"}
       py={10}
     >
-      <Box position={"relative"} w={["90%", "90%", "85%"]}>
+      <Box position={"relative"} w={["90%", "90%", "81%"]}>
         <Text
           fontSize={["22px", "28px"]}
           fontWeight={800}
           textAlign={["center", "center", "left"]}
         >
-          Why ContentDectecor.AI
+          Why Paraphrasing Tool
         </Text>
         <TableContainer w={["100%", "100%", "60%"]} mt="20px">
           <Table variant="simple">
             {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
 
             <Tbody>
-              <Tr>
+              <Tr w={["50vw", "50%", "auto"]}>
                 <Td border={"1px"} borderColor={"var(--border-color)"}>
-                  🔤 No of Languages
+                  🔁 No Limits
                 </Td>
                 <Td border={"1px"} borderColor={"var(--border-color)"}>
-                  50+
-                </Td>
-              </Tr>
-              <Tr>
-                <Td border={"1px"} borderColor={"var(--border-color)"}>
-                  🔁 Check Counts
-                </Td>
-                <Td border={"1px"} borderColor={"var(--border-color)"}>
-                  Unlimited
+                  Unlimited Usage with no limitations
                 </Td>
               </Tr>
               <Tr>
                 <Td border={"1px"} borderColor={"var(--border-color)"}>
-                  ⌛ Text Length{" "}
+                  🔤 Instant Paraphrase
                 </Td>
                 <Td border={"1px"} borderColor={"var(--border-color)"}>
-                  Unlimited
+                  Paraphrase your text instantly
                 </Td>
               </Tr>
               <Tr>
                 <Td border={"1px"} borderColor={"var(--border-color)"}>
-                  🆓 Free or Paid
+                  👤 No Login
                 </Td>
                 <Td border={"1px"} borderColor={"var(--border-color)"}>
-                  Free
+                  No Registration or Signup required
+                </Td>
+              </Tr>
+              <Tr>
+                <Td border={"1px"} borderColor={"var(--border-color)"}>
+                  🆓 100% Free
+                </Td>
+                <Td border={"1px"} borderColor={"var(--border-color)"}>
+                  Free and no payment required
                 </Td>
               </Tr>
             </Tbody>

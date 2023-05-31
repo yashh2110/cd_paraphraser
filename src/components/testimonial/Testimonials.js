@@ -39,7 +39,8 @@ function Testimonials({ styles }) {
   return (
     <Box
       minH="60vh"
-      backgroundColor="var(--secondary-background-color)"
+      backgroundColor="var(--primary-background-color)"
+      // backgroundColor="var(--secondary-background-color)"
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -48,15 +49,25 @@ function Testimonials({ styles }) {
       flexWrap={"wrap"}
       py={10}
     >
-      <Box position={"relative"} w={["90%", "90%", "85%"]}>
+      <Box position={"relative"} w={["90%", "90%", "81%"]}>
         <Text
-          fontSize={["22px", "28px"]}
+          fontSize={["22px", "24px"]}
           fontWeight={800}
-          textAlign={["center", "center", "left"]}
+          textAlign={["center", "center", "center"]}
         >
-          Testimonials
+          Hear from Our Satisfied Users
         </Text>
-        <Box position={"relative"} w="100%" mt="20px">
+        <Text
+          mt={"20px"}
+          mx={"auto"}
+          textAlign={["center", "center", "center"]}
+          w={["100%", "100%", "80%"]}
+        >
+          Don't just take our word for it. Listen to our satisfied users'
+          experiences with our paraphrasing tool. From students to
+          professionals, our tool has benefited people from diverse fields.
+        </Text>
+        <Box position={"relative"} w="100%" mt="20px" py={"5px"}>
           <Box
             position={"absolute"}
             left={"0"}

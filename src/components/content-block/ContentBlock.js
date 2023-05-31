@@ -1,7 +1,14 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Heading, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import React from "react";
 
-function ContentBlock({ title, content, theme }) {
+function ContentBlock({
+  title,
+  content,
+  theme,
+  titleFormat,
+  titleFontSize,
+  listItems,
+}) {
   return (
     <Box
       //   minH="60vh"
@@ -18,18 +25,26 @@ function ContentBlock({ title, content, theme }) {
       flexWrap={"wrap"}
       py={10}
     >
-      <Box position={"relative"} w={["90%", "90%", "85%"]}>
+      <Box position={"relative"} w={["90%", "90%", "81%"]}>
         <Box w={["100%", "100%", "80%"]}>
-          <Text
-            fontSize={["22px", "28px"]}
+          <Heading
+            as={titleFormat}
+            fontSize={titleFontSize || ["22px", "28px"]}
             fontWeight={800}
             textAlign={["center", "center", "left"]}
           >
             {title}
-          </Text>
-          <Text mt={"20px"} textAlign={["center", "center", "left"]}>
-            {content}
-          </Text>
+          </Heading>
+          {content?.map((item) => (
+            <Text mt={"20px"} textAlign={["center", "center", "left"]}>
+              {item}
+            </Text>
+          ))}
+          <UnorderedList mt={"20px"}>
+            {listItems?.map((item) => (
+              <ListItem mb={"15px"}>{item}</ListItem>
+            ))}
+          </UnorderedList>
         </Box>
       </Box>
     </Box>

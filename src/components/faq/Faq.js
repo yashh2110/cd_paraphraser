@@ -15,6 +15,7 @@ function Faq() {
     <Box
       minH="60vh"
       backgroundColor="var(--primary-background-color)"
+      // backgroundColor="var(--secondary-background-color)"
       display="flex"
       justifyContent="center"
       alignItems="flex-start"
@@ -22,16 +23,16 @@ function Faq() {
       flexWrap={"wrap"}
       py={10}
     >
-      <Box w={["90%", "90%", "85%"]}>
+      <Box w={["90%", "90%", "81%"]}>
         <Text
           fontSize={["22px", "28px"]}
           fontWeight={800}
           w="100%"
           textAlign={["center", "center", "left"]}
         >
-          FAQs
+          Got Questions? We Have Answers
         </Text>
-        <Box mt="20px">
+        <Box mt="20px" py="5px">
           <Accordion allowToggle w="100vw">
             {faq.map((item) => (
               <AccordionItem
