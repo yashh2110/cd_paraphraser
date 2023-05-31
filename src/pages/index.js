@@ -23,7 +23,15 @@ const Playground = dynamic(
   () => import("@/components/paraphraser/playground/Playground"),
   {
     ssr: false,
-    loading: () => <Skeleton></Skeleton>,
+    loading: () => (
+      <Skeleton
+        w={["90%", "90%", "70%"]}
+        h={"55vh"}
+        mt={["20px"]}
+        endColor="var(--border-color)"
+        startColor="var(--secondary-background-color)"
+      ></Skeleton>
+    ),
   }
 );
 export default function Home() {
