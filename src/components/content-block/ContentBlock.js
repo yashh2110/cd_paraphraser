@@ -7,6 +7,8 @@ function ContentBlock({
   theme,
   titleFormat,
   titleFontSize,
+  titleLineHeight,
+  titleWeight,
   listItems,
 }) {
   return (
@@ -29,20 +31,35 @@ function ContentBlock({
         <Box w={["100%", "100%", "80%"]}>
           <Heading
             as={titleFormat}
-            fontSize={titleFontSize || ["22px", "28px"]}
-            fontWeight={800}
+            fontSize={titleFontSize || ["32px"]}
+            fontWeight={titleWeight || "semibold"}
+            lineHeight={titleLineHeight || "48px"}
             textAlign={["center", "center", "left"]}
+            letterSpacing={"0.01em"}
           >
             {title}
           </Heading>
           {content?.map((item) => (
-            <Text mt={"20px"} textAlign={["center", "center", "left"]}>
+            <Text
+              mt={"20px"}
+              textAlign={["center", "center", "left"]}
+              fontSize={"17px"}
+              letterSpacing={"0.01em"}
+              lineHeight={"27px"}
+            >
               {item}
             </Text>
           ))}
           <UnorderedList mt={"20px"}>
             {listItems?.map((item) => (
-              <ListItem mb={"15px"}>{item}</ListItem>
+              <ListItem
+                mb={"15px"}
+                fontSize={"17px"}
+                letterSpacing={"0.01em"}
+                lineHeight={"27px"}
+              >
+                {item}
+              </ListItem>
             ))}
           </UnorderedList>
         </Box>

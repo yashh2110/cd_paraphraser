@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Heading,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
@@ -24,14 +25,15 @@ function Faq() {
       py={10}
     >
       <Box w={["90%", "90%", "81%"]}>
-        <Text
-          fontSize={["22px", "28px"]}
-          fontWeight={800}
-          w="100%"
-          textAlign={["center", "center", "left"]}
+        <Heading
+          as="h2"
+          fontSize={["28px"]}
+          fontWeight={"semibold"}
+          lineHeight={"42px"}
+          letterSpacing={"0.01em"}
         >
           Got Questions? We Have Answers
-        </Text>
+        </Heading>
         <Box mt="20px" py="5px">
           <Accordion allowToggle w="100vw">
             {faq.map((item) => (
@@ -50,11 +52,25 @@ function Faq() {
                     h={"25px"}
                     mr={3}
                   />
-                  <Box as="span" flex="1" textAlign="left">
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize={"17px"}
+                    letterSpacing={"0.01em"}
+                    lineHeight={"27px"}
+                  >
                     {item.title}
                   </Box>
                 </AccordionButton>
-                <AccordionPanel pb={4}>{item.desc}</AccordionPanel>
+                <AccordionPanel
+                  pb={4}
+                  fontSize={"17px"}
+                  letterSpacing={"0.01em"}
+                  lineHeight={"27px"}
+                >
+                  {item.desc}
+                </AccordionPanel>
               </AccordionItem>
             ))}
           </Accordion>

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/header/Header";
-import logo from "../assets/svg/Logo.svg";
+import logo from "../assets/png/logo.png";
 import { menu } from "@/data/menu";
 import {
   Accordion,
@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Heading,
   Skeleton,
   Text,
 } from "@chakra-ui/react";
@@ -55,15 +56,21 @@ export default function Home() {
           flexDirection={"column"}
         >
           <Box w={["90%", "90%", "81%"]}>
-            <Text fontSize={["25px", "30px"]} fontWeight="700">
+            <Heading
+              as="h1"
+              fontSize={["32px"]}
+              fontWeight={"semibold"}
+              lineHeight={"48px"}
+              letterSpacing={"0.01em"}
+            >
               Paraphraser
-            </Text>
+            </Heading>
             <Playground />
           </Box>
           <ContentBlock
             theme="secondary"
             titleFormat="h1"
-            titleFontSize={["22px", "24px"]}
+            titleFontSize={["32px"]}
             title={"Free Online Paraphrasing Tool"}
             content={[
               "Paraphrasing Tool addresses and simplifies your message. As writing deman standards continue to evolve in the digital landscape, there is an escalating need for practical solutions. At Paraphrasing Tool, we aim to radically revolutionize your writing experience by helping you transform the text into clear, compelling, and 100% original content",
@@ -74,7 +81,8 @@ export default function Home() {
           <ContentBlock
             theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={"No Word Limit: Embrace the Freedom of Expression"}
             content={[
               "Unlike other tools that restrict the volume of words you can paraphrase at once, our tool values your freedom of expression. It invites you to paraphrase a sentence, a paragraph, or an entire article without constraints. This liberating feature allows you to work without limitations, enhancing your productivity.",
@@ -83,7 +91,8 @@ export default function Home() {
           <ContentBlock
             // theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={"AI-Powered: Harness the Power of Advanced Technology"}
             content={[
               "Our paraphrasing tool is powered by cutting-edge AI technology. This isn't a basic word replacement tool—it comprehends the context of your text and rewrites it while maintaining the essence and context. This level of sophistication ensures your content is not just unique but also meaningful and coherent.",
@@ -92,7 +101,8 @@ export default function Home() {
           <ContentBlock
             theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={"Plagiarism-Free: Maintain Your Credibility"}
             content={[
               "Our tool assists you in generating unique content that effortlessly passes plagiarism checks. This crucial feature allows you to uphold your credibility, an essential factor in building trust with your audience.",
@@ -101,7 +111,8 @@ export default function Home() {
           <ContentBlock
             // theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={
               "User-Friendly Interface: Simplicity is the Ultimate Sophistication"
             }
@@ -112,7 +123,8 @@ export default function Home() {
           <ContentBlock
             theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={
               "User-Friendly Interface: Simplicity is the Ultimate Sophistication"
             }
@@ -123,7 +135,8 @@ export default function Home() {
           <ContentBlock
             // theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={"Free to Use: Quality Doesn't Have to Be Expensive"}
             content={[
               "Yes, it's true! Our tool is absolutely free to use.",
@@ -133,7 +146,8 @@ export default function Home() {
           <ContentBlock
             theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={"How Paraphrasing Tool Works?"}
             content={[
               "Utilizing our paraphrasing tool is a cakewalk. Here's a detailed breakdown of the three steps involved:",
@@ -166,7 +180,8 @@ export default function Home() {
           <ContentBlock
             theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={"A Tool for All: Catering to a Wide User Spectrum"}
             content={[
               "Our Free Online Paraphraser is designed with a diverse user base in mind, accommodating the unique needs of:",
@@ -209,7 +224,8 @@ export default function Home() {
           <ContentBlock
             theme="secondary"
             titleFormat="h2"
-            titleFontSize={["20px", "22px"]}
+            titleFontSize={["28px"]}
+            titleLineHeight={"42px"}
             title={"We're Here to Assist You"}
             content={[
               "Feel free to reach out to us with any queries, comments, or feedback. Your thoughts are valuable to us, and we would love to hear from you. At ContentDetector.ai, we're committed to helping you revolutionize your writing experience.",

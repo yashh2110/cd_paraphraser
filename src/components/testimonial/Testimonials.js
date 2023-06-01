@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import circle from "../../assets/svg/circle-creative.svg";
 import square from "../../assets/svg/square-creative.svg";
-import { Box, Card, Text } from "@chakra-ui/react";
+import { Box, Card, Heading, Text } from "@chakra-ui/react";
 import { testimonials } from "@/data/common";
 import StarIcon from "@mui/icons-material/Star";
 function Testimonials({ styles }) {
@@ -50,18 +50,24 @@ function Testimonials({ styles }) {
       py={10}
     >
       <Box position={"relative"} w={["90%", "90%", "81%"]}>
-        <Text
-          fontSize={["22px", "24px"]}
-          fontWeight={800}
+        <Heading
+          as="h2"
+          fontSize={["28px"]}
+          fontWeight={"semibold"}
+          lineHeight={"42px"}
+          letterSpacing={"0.01em"}
           textAlign={["center", "center", "center"]}
         >
           Hear from Our Satisfied Users
-        </Text>
+        </Heading>
         <Text
           mt={"20px"}
           mx={"auto"}
           textAlign={["center", "center", "center"]}
           w={["100%", "100%", "80%"]}
+          fontSize={"17px"}
+          letterSpacing={"0.01em"}
+          lineHeight={"27px"}
         >
           Don't just take our word for it. Listen to our satisfied users'
           experiences with our paraphrasing tool. From students to
@@ -118,7 +124,14 @@ function Testimonials({ styles }) {
                   <StarIcon style={{ color: "#FDCC0D" }} />
                   <StarIcon style={{ color: "#dddddd" }} />
                 </Box>
-                <Text my="15px">{item.desc}</Text>
+                <Text
+                  my="15px"
+                  fontSize={"17px"}
+                  letterSpacing={"0.01em"}
+                  lineHeight={"27px"}
+                >
+                  {item.desc}
+                </Text>
                 <Box
                   pt="10px"
                   display={"flex"}
