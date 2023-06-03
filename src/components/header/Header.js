@@ -33,7 +33,7 @@ function Header({ logo, menu }) {
       <Box w={["200px", "220px", "250px"]}>
         <Image src={logo} alt="paraphasingtool.app" />
       </Box>
-      <Box display="flex" gap={10} alignItems="center" hideBelow="md">
+      {/* <Box display="flex" gap={10} alignItems="center" hideBelow="md">
         {menu?.map((item) => (
           <Link key={item.title} href={item.link}>
             <Box display="flex" gap={2} alignItems="center">
@@ -44,8 +44,8 @@ function Header({ logo, menu }) {
             </Box>
           </Link>
         ))}
-      </Box>
-      <Icon as={FiMenu} onClick={onOpen} hideFrom="md" boxSize={5} />
+      </Box> */}
+      {/* <Icon as={FiMenu} onClick={onOpen} hideFrom="md" boxSize={5} />
       <Drawer placement={"left"} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
@@ -62,7 +62,7 @@ function Header({ logo, menu }) {
             ))}
           </DrawerBody>
         </DrawerContent>
-      </Drawer>
+      </Drawer> */}
     </Box>
   );
 }

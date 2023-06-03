@@ -13,6 +13,9 @@
   --link-color: #146ae2;
   --primary-background-color: #fffffe;
   --secondary-background-color: #fbfbfb;
+  --footer-bg: #111518;
+  --footer-text: #6c737d;
+  --footer-divider: rgba(255, 255, 255, 0.1);
 }
 
 .heading-1 {
@@ -66,4 +69,92 @@ div.DraftEditor-root {
 div.DraftEditor-editorContainer,
 div.public-DraftEditor-content {
   height: 100%;
+}
+
+.footer_container {
+  padding-top: 6px;
+  background-color: #050709;
+}
+.footer_layout {
+  margin: 20px 5% 0px;
+}
+.footer_menu {
+  padding: 10px;
+  padding-bottom: 55px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  font-size: 16px;
+  width: 100%;
+  /* gap: 10%; */
+}
+.footer_menu_item {
+  margin: 10px 20px 10px 0;
+  /* font-weight: 600; */
+  color: var(--footer-text);
+  cursor: pointer;
+  display: block;
+  text-decoration: underline;
+}
+.footer_menu_item:hover {
+  color: var(--white);
+}
+.footer_sub_container_1 {
+  width: 40%;
+}
+.footer_sub_container_2 {
+  width: 18%;
+  margin-left: 20px;
+}
+.footer_heading {
+  color: var(--white);
+  letter-spacing: 0.01em;
+  font-size: 18px;
+  /* line-height: 36px; */
+  margin: 10px 0;
+}
+.footer_sub_head {
+  color: #687279;
+  font-size: 18px;
+}
+.footer_social_share {
+  padding-top: 40px;
+}
+.social_btn {
+  padding: 10px 20px;
+  background-color: #03a9f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white) !important;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 47px;
+}
+.copyrights {
+  padding: 7px;
+  padding-top: 20px;
+  color: var(--footer-text);
+  border-top: 1px solid grey;
+}
+@media screen and (max-width: 1025px) {
+  .footer_sub_container_1 {
+    width: 100%;
+  }
+  .footer_social_share {
+    padding-top: 10px;
+  }
+  .social_btn {
+    padding: 10px 8px;
+    white-space: nowrap;
+    font-size: 15px !important;
+    overflow: hidden;
+  }
+  .footer_sub_container_2 {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
 }

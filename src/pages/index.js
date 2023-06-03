@@ -20,6 +20,7 @@ import Testimonials from "@/components/testimonial/Testimonials";
 import Faq from "@/components/faq/Faq";
 import SeoTable from "@/components/seo/SeoTable";
 import ContentBlock from "@/components/content-block/ContentBlock";
+import Footer from "@/components/footer/Footer";
 const Playground = dynamic(
   () => import("@/components/paraphraser/playground/Playground"),
   {
@@ -232,6 +233,7 @@ export default function Home() {
             ]}
           />
         </Box>
+        <Footer />
       </main>
     </>
   );

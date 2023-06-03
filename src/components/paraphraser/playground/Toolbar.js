@@ -30,7 +30,7 @@ function Toolbar({ handleDelete, handleCopy }) {
       justifyContent="space-between"
       borderBottom="1px"
       borderBottomColor="#1a1a1a26"
-      p={1}
+      py={2.5}
       px={4}
     >
       <Select placeholder="Mode" hideFrom={"md"} w={"35%"} fontWeight={500}>
@@ -61,7 +61,7 @@ function Toolbar({ handleDelete, handleCopy }) {
         </Text>
       </Box>
       <Box display="flex" alignItems="center" gap={3}>
-        <IconButton
+        {/* <IconButton
           variant={"ghost"}
           icon={<Icon as={AiOutlineShareAlt} boxSize={5} />}
         />
@@ -74,7 +74,7 @@ function Toolbar({ handleDelete, handleCopy }) {
           variant={"ghost"}
           onClick={handleDelete}
           icon={<Icon as={AiOutlineDelete} boxSize={5} />}
-        />
+        /> */}
       </Box>
       {/* <Modal finalFocusRef={modeRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
