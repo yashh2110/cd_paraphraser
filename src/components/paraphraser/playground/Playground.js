@@ -174,7 +174,8 @@ function Playground() {
                     fontWeight={500}
                     pl={4}
                   >
-                    Word count: {}
+                    Word count:{" "}
+                    {rephrasedContent?.match(/\b[-?(\w+)?]+\b/gi)?.length || 0}
                   </Text>
                   <IconButton
                     variant={"ghost"}
@@ -224,7 +225,8 @@ function Playground() {
               left={0}
             >
               <Text fontSize={"15px"} color={"#585858"} fontWeight={500} pl={4}>
-                Word count: {}
+                Word count:{" "}
+                {rephrasedContent?.match(/\b[-?(\w+)?]+\b/gi)?.length || 0}
               </Text>
               <IconButton
                 variant={"ghost"}
