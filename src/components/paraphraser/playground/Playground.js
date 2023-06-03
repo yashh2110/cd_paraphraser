@@ -238,8 +238,8 @@ function Playground() {
           </Box>
         </Box>
         <Button
-          mr={["auto", "auto", "0"]}
-          ml={["auto"]}
+          ml={["auto", "auto", "0"]}
+          mr={["auto"]}
           my={4}
           w={["150px"]}
           display={"flex"}
