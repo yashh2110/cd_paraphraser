@@ -120,20 +120,9 @@ export default function Home() {
               "Our tool's design hinges on simplicity. It doesn't require special skills to navigate. It's as easy as pasting your text, clicking 'Paraphrase,' and letting our AI do the rest. This simplicity ensures a seamless user experience, making the process of creating unique content enjoyable.",
             ]}
           />
+
           <ContentBlock
             theme="secondary"
-            titleFormat="h2"
-            titleFontSize={["28px"]}
-            titleLineHeight={"42px"}
-            title={
-              "User-Friendly Interface: Simplicity is the Ultimate Sophistication"
-            }
-            content={[
-              "Our tool's design hinges on simplicity. It doesn't require special skills to navigate. It's as easy as pasting your text, clicking 'Paraphrase,' and letting our AI do the rest. This simplicity ensures a seamless user experience, making the process of creating unique content enjoyable.",
-            ]}
-          />
-          <ContentBlock
-            // theme="secondary"
             titleFormat="h2"
             titleFontSize={["28px"]}
             titleLineHeight={"42px"}
@@ -144,7 +133,7 @@ export default function Home() {
             ]}
           />
           <ContentBlock
-            theme="secondary"
+            // theme="secondary"
             titleFormat="h2"
             titleFontSize={["28px"]}
             titleLineHeight={"42px"}
@@ -178,7 +167,7 @@ export default function Home() {
 
           {/* <Testimonials /> */}
           <ContentBlock
-            theme="primary"
+            theme="secondary"
             titleFormat="h2"
             titleFontSize={["28px"]}
             titleLineHeight={"42px"}
@@ -222,7 +211,7 @@ export default function Home() {
           />
           <Faq />
           <ContentBlock
-            theme="primary"
+            theme="secondary"
             titleFormat="h2"
             titleFontSize={["28px"]}
             titleLineHeight={"42px"}

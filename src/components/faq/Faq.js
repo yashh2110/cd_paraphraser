@@ -15,8 +15,8 @@ function Faq() {
   return (
     <Box
       minH="60vh"
-      // backgroundColor="var(--primary-background-color)"
-      backgroundColor="var(--secondary-background-color)"
+      backgroundColor="var(--primary-background-color)"
+      // backgroundColor="var(--secondary-background-color)"
       display="flex"
       justifyContent="center"
       alignItems="flex-start"
