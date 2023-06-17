@@ -49,7 +49,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header logo={logo} menu={menu} />
         <Box
           mt={["15px", "25px"]}
           display={"flex"}
@@ -177,9 +176,9 @@ export default function Home() {
             ]}
           />
 
-          <Testimonials />
+          {/* <Testimonials /> */}
           <ContentBlock
-            theme="secondary"
+            theme="primary"
             titleFormat="h2"
             titleFontSize={["28px"]}
             titleLineHeight={"42px"}
@@ -223,17 +222,16 @@ export default function Home() {
           />
           <Faq />
           <ContentBlock
-            theme="secondary"
+            theme="primary"
             titleFormat="h2"
             titleFontSize={["28px"]}
             titleLineHeight={"42px"}
             title={"We're Here to Assist You"}
             content={[
-              "Feel free to reach out to us with any queries, comments, or feedback. Your thoughts are valuable to us, and we would love to hear from you. At ContentDetector.ai, we're committed to helping you revolutionize your writing experience.",
+              "Feel free to reach out to us with any queries, comments, or feedback. Your thoughts are valuable to us, and we would love to hear from you. We're committed to helping you revolutionize your writing experience.",
             ]}
           />
         </Box>
-        <Footer />
       </main>
     </>
   );

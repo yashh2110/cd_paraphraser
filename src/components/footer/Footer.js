@@ -41,9 +41,9 @@ function Footer() {
               <b>PARAPHRASINGTOOL.APP</b>
             </p>
             <span className="footer_sub_head">
-              AI Detector along with Paraphraser and Language Detector
+              Go to website for free sentence and paragraph paraphrasing.
             </span>
-            <div className="footer_social_share">
+            {/* <div className="footer_social_share">
               <p className="footer_heading">
                 <b>Like our Paraphrasing tool? Save it, share it!</b>
               </p>
@@ -101,6 +101,15 @@ function Footer() {
                   </div>
                 </TwitterShareButton>
               </div>
+            </div> */}
+            <div className="footer_social_share">
+              <p className="footer_heading">
+                <b>Contact Us</b>
+              </p>
+              <p className="footer_sub_head">Need help or have a question?</p>
+              <p className="footer_sub_head">
+                Contact us at: hello@paraphrasingtool.app
+              </p>
             </div>
           </div>
           <div className="footer_sub_container_2">
@@ -122,14 +131,14 @@ function Footer() {
             >
               About Us
             </Link>
-            <Link
+            {/* <Link
               href="/articles/"
               target="_blank"
               rel="noreferrer"
               className="footer_menu_item footer_sub_head"
             >
               Articles
-            </Link>
+            </Link> */}
             <Link
               href="/terms/"
               target="_blank"
@@ -219,15 +228,15 @@ function Footer() {
               Google Bard Statistics
             </Link>
           </div> */}
-          <div className="footer_sub_container_2">
+          {/* <div className="footer_sub_container_2">
             <p className="footer_heading">
               <b>Contact Us</b>
             </p>
             <p className="footer_sub_head">Need help or have a question?</p>
             <p className="footer_sub_head">
-              Contact us at: hello@contentdetector.ai
+              Contact us at: hello@paraphrasingtool.app
             </p>
-          </div>
+          </div> */}
 
           {/* <Link href="/" className="footer_menu_item">
             Home

@@ -31,7 +31,9 @@ function Header({ logo, menu }) {
       borderBottomColor="var(--border-color)"
     >
       <Box w={["200px", "220px", "250px"]}>
-        <Image src={logo} alt="paraphasingtool.app" />
+        <Link href={"/"}>
+          <Image src={logo} alt="paraphasingtool.app" />
+        </Link>
       </Box>
       {/* <Box display="flex" gap={10} alignItems="center" hideBelow="md">
         {menu?.map((item) => (

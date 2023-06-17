@@ -10,6 +10,8 @@ function ContentBlock({
   titleLineHeight,
   titleWeight,
   listItems,
+  py,
+  pb,
 }) {
   return (
     <Box
@@ -25,7 +27,8 @@ function ContentBlock({
       //   flexDirection={"row"}
       w={"100vw"}
       flexWrap={"wrap"}
-      py={10}
+      py={py || 10}
+      pb={pb}
     >
       <Box position={"relative"} w={["90%", "90%", "81%"]}>
         <Box w={["100%", "100%", "80%"]}>

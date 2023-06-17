@@ -51,13 +51,7 @@ function Toolbar({ handleDelete, handleCopy }) {
           Standard
         </Text>
         <Text color="var(--primary-color)" cursor="pointer">
-          Simplify
-        </Text>
-        <Text color="var(--secondary-text-color)" cursor="pointer">
-          Formal
-        </Text>
-        <Text color="var(--secondary-text-color)" cursor="pointer">
-          Summarise
+          Human
         </Text>
       </Box>
       <Box display="flex" alignItems="center" gap={3}>
