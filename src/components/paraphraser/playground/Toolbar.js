@@ -20,7 +20,7 @@ import {
   AiOutlineCopy,
   AiOutlineDelete,
 } from "react-icons/ai";
-function Toolbar({ handleDelete, handleCopy }) {
+function Toolbar({ handleDelete, handleCopy, onChange, mode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const modeRef = useRef(null);
   return (
@@ -33,26 +33,61 @@ function Toolbar({ handleDelete, handleCopy }) {
       py={2.5}
       px={4}
     >
-      <Select placeholder="Mode" hideFrom={"md"} w={"35%"} fontWeight={500}>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
+      <Select
+        placeholder="Mode"
+        hideFrom={"md"}
+        w={"35%"}
+        fontWeight={500}
+        value={mode}
+        onChange={(item) => {
+          onChange(item.target.value);
+        }}
+      >
+        <option value="standard">Standard</option>
+        <option value="human">Human</option>
       </Select>
       <Box
         display="flex"
         alignItems="center"
-        gap={6}
         fontSize="14.5px"
         fontWeight="500"
         hideBelow="md"
       >
-        <Text fontWeight="600">Mode:</Text>
-        <Text color="var(--secondary-text-color)" cursor="pointer">
-          Standard
+        <Text fontWeight="600" mr={2}>
+          Mode:
         </Text>
-        <Text color="var(--primary-color)" cursor="pointer">
-          Human
-        </Text>
+        <Button
+          colorScheme="teal"
+          variant="ghost"
+          onClick={() => onChange("standard")}
+        >
+          <Text
+            color={
+              mode === "standard"
+                ? "var(--primary-color)"
+                : "var(--secondary-text-color)"
+            }
+            cursor="pointer"
+          >
+            Standard
+          </Text>
+        </Button>
+        <Button
+          colorScheme="teal"
+          variant="ghost"
+          onClick={() => onChange("human")}
+        >
+          <Text
+            color={
+              mode === "human"
+                ? "var(--primary-color)"
+                : "var(--secondary-text-color)"
+            }
+            cursor="pointer"
+          >
+            Human
+          </Text>
+        </Button>
       </Box>
       <Box display="flex" alignItems="center" gap={3}>
         {/* <IconButton

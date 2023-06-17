@@ -1,20 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
-import Header from "@/components/header/Header";
-import logo from "../assets/png/logo.png";
-import { menu } from "@/data/menu";
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  Heading,
-  Skeleton,
-  Text,
-} from "@chakra-ui/react";
+
+import { Box, Heading, Skeleton } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import Testimonials from "@/components/testimonial/Testimonials";
 import Faq from "@/components/faq/Faq";

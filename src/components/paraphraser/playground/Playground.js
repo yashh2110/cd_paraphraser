@@ -4,7 +4,11 @@ import { Box, Button, Icon, IconButton, Text } from "@chakra-ui/react";
 import { ContentState, EditorState } from "draft-js";
 import Toolbar from "./Toolbar";
 import Draft from "@/components/editor/Editor";
-import { paraphraseService } from "../../../services/paraphraser";
+import {
+  paraphraseHumanService,
+  paraphraseService,
+  paraphraseStandardService,
+} from "../../../services/paraphraser";
 import { toast } from "react-hot-toast";
 import {
   AiOutlineShareAlt,
@@ -18,6 +22,8 @@ function Playground() {
   const [wordCount, setWordCount] = useState(0);
   const [rephraseLoading, setRephraseLoading] = useState(false);
   const [rephrasedContent, setRephrasedContent] = useState(null);
+  const [mode, setMode] = useState("standard");
+
   const editorRef = useRef(null);
 
   useEffect(() => {
@@ -42,12 +48,18 @@ function Playground() {
   const rephrase = async () => {
     setRephraseLoading(true);
     try {
-      const res = await paraphraseService({ content });
-      console.log(res.data);
+      setRephrasedContent("");
+      let res;
+      if (mode === "standard") {
+        res = await paraphraseStandardService({ content });
+      } else {
+        res = await paraphraseHumanService({ content });
+      }
       setRephrasedContent(res?.data?.paraPhrase);
       setRephraseLoading(false);
     } catch (error) {
       console.log(error);
+      toast.error(error || "something went wrong, please try again!");
       setRephraseLoading(false);
     }
   };
@@ -73,6 +85,7 @@ function Playground() {
       toast.error("No content to copy", { duration: 1300 });
     }
   };
+  console.log(mode);
   return (
     <Box mt={["20px"]}>
       <Box w={["100%", "100%", "100%", "75%"]}>
@@ -83,7 +96,12 @@ function Playground() {
           my={1}
           overflow={"hidden"}
         >
-          <Toolbar handleDelete={handleClear} handleCopy={handleCopy} />
+          <Toolbar
+            handleDelete={handleClear}
+            handleCopy={handleCopy}
+            onChange={setMode}
+            mode={mode}
+          />
           <Box
             display="flex"
             justifyContent={"center"}
