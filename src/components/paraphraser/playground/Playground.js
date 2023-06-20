@@ -59,7 +59,9 @@ function Playground() {
       setRephraseLoading(false);
     } catch (error) {
       console.log(error);
-      toast.error(error || "something went wrong, please try again!");
+      toast.error(
+        error?.response?.message || "something went wrong, please try again!"
+      );
       setRephraseLoading(false);
     }
   };
